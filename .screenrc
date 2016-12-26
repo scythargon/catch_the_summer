@@ -1,0 +1,8 @@
+#caption always "%= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+startup_message off
+altscreen on
+defscrollback 5000
+hardstatus off
+hardstatus alwayslastline
+shell /bin/bash

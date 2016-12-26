@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+tickets.json
+places.json
+places_en.json
+google_maps_example
+/static
+/media

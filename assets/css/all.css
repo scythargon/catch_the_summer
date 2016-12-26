@@ -1,0 +1,40 @@
+.mapMarker {padding-right:3px;height:33px;font-size:1.1667em;font-weight:bold;text-align:center;line-height:23px;cursor:pointer;}
+
+.mapTooltip .inner{width:240px;border:1px solid #666;z-index:1111;padding:7px;cursor:auto;}
+.mapTooltip h2{font-size:1em;padding:5px 0;}
+.mapTooltip .info-left{height:1%;overflow:hidden;}
+.mapTooltip .info-right{float:right;text-align:right;}
+.mapTooltip .info-right p{margin: 5px 0 0;}
+.mapTooltip .price{font-size:2.5em;line-height:1em;}
+body .mapTooltip .price span{font-size:0.4em;font-weight:normal;text-align:right;}
+body span.note{font-size:0.8333em;display:block;}
+.mapTooltip .tooltipDescription{width:100%;overflow:hidden;}
+
+.mapTooltip .arrowTop{position:absolute;left:50%;top:-7px;height:7px;width:14px;display:none;}
+.mapTooltip .arrowBottom{position:absolute;bottom:-7px;left:50%;height:7px;width:14px;display:none;}
+.mapTooltip .arrowLeft{position:absolute;left:-7px;top:70px;width:7px;height:14px;display:none;}
+.mapTooltip .arrowRight{position:absolute;right:-7px;top:70px;width:7px;height:14px;display:none;}
+.left .arrowLeft, .right .arrowRight, .bottom .arrowBottom, .top .arrowTop{display:block;}
+
+
+.mapTooltip{background:#fff;}
+.mapTooltip h2{color:#666;}
+body .mapTooltip .price span{color:inherit;}
+.mapTooltip .arrowLeft{background:url(../images/tooltipArrow-l.png) no-repeat;}
+.mapTooltip .arrowRight{background:url(../images/tooltipArrow-r.png) no-repeat;}
+.mapTooltip .arrowTop{background:url(../images/tooltipArrow-t.png) no-repeat;}
+.mapTooltip .arrowBottom{background:url(../images/tooltipArrow-b.png) no-repeat;}
+
+
+body .mapTooltip .price span{color:inherit;}
+.mapTooltip .arrowLeft{background:url(../images/tooltipArrow-l.png) no-repeat;}
+.mapTooltip .arrowRight{background:url(../images/tooltipArrow-r.png) no-repeat;}
+.mapTooltip .arrowTop{background:url(../images/tooltipArrow-t.png) no-repeat;}
+.mapTooltip .arrowBottom{background:url(../images/tooltipArrow-b.png) no-repeat;}
+
+/*.mapMarker {background:url(../images/bg-num.png) no-repeat; color:#fff;}
+.active .mapMarker, .mapMarker:hover{background-position:0 -33px !important;}
+*/
+
+.mapMarker {background-color: gray; height: 100%;}
+.active .mapMarker, .mapMarker:hover{background-color: cyan;}

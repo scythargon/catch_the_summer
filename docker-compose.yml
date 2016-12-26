@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  app:
+    build: .
+    environment:
+      - DJANGO_DEBUG=True
+    ports:
+      - "8000:80"
+
+volumes:
+  pgdata:
+    driver: local

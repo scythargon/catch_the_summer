@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/all.css"/>
+    <script type="text/javascript" src="static/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="static/js/google_maps.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
+    function initialize_markers(map, tickets){
+        Map.initializeMap(map);
+
+        tickets.features.forEach(function(item, i, arr) {
+          Map.createMarker({
+            coordinates: item.geometry.coordinates,
+            title: item.properties.name,
+            content: '<div class="mapTooltip left"><div class="inner"><div class="cHolder"><div class="tooltipPreview">'+item.properties.name+' (<b>'+item.properties.iata+'</b>) <a target="_blank" href="https://www.aviasales.ru/calendar?destination='+item.properties.iata+'">find tickets</a></div></div></div><span class="arrowTop"></span><span class="arrowBottom"></span><span class="arrowLeft"></span><span class="arrowRight"></span></div>', //fill html
+            marker: '<div class="mapMarker">'+item.properties.price+'rub </div>', // set Index number
+            contentOffset: {x: 31, y: -5, z: 1000-1}, //don't touch. this is design settings
+            markerOffset: {x:0, y: -33, z: 500-1} //don't touch. this is design settings
+          });
+        });
+      }
+
+
+var map;
+var tickets;
+
+function eqfeed_callback(_tickets) {
+  tickets = _tickets;
+}
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 0, lng: 100 },
+    zoom: 2
+  });
+
+var circle ={
+    path: google.maps.SymbolPath.CIRCLE,
+    fillColor: 'red',
+    fillOpacity: .4,
+    scale: 4.5,
+    strokeColor: 'white',
+    strokeWeight: 1
+};
+
+  var layer = new google.maps.FusionTablesLayer({
+    query: {
+      select: 'lat, lon, temp',
+      from: '1jsm-2ht36c2wYzypwH2Sgkw1H-BJaCz28cYM1IUw',
+//      where: 'temp > 0'
+    },
+    styles: [
+    {
+      markerOptions: {
+        iconName: "small_red"
+      },
+    },
+    {
+      where: 'temp < 25',
+      markerOptions: {
+        iconName: "small_yellow"
+      },
+    },
+    {
+      where: 'temp < 17',
+      markerOptions: {
+        iconName: "small_green"
+      },
+    },
+    {
+      where: 'temp < 7',
+      markerOptions: {
+        iconName: "small_blue"
+      },
+    },
+    {
+      where: 'temp < -12',
+      markerOptions: {
+        iconName: "small_purple"
+      },
+    },
+    ]
+  });
+  layer.setMap(map);
+
+  initialize_markers(map, tickets);
+}
+
+
+
+    </script>
+    <script
+      src="/data">
+    </script>
+    <script async defer
+      src="http://maps.googleapis.com/maps/api/js?sensor=true&callback=initMap">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -124.4685,
+          40.3087,
+          8.7
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "mag": 3.3
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -140.8051,
+          61.5171,
+          8.8
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "mag": 2.3
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

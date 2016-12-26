@@ -1,0 +1,10 @@
+venv
+kindbeetle_front/node_modules
+npm-debug.log
+.git
+.idea
+Dockerfile
+.dockerignore
+**/__pycache__
+**/.gitignore
+google_maps_example
