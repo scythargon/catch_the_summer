@@ -6,7 +6,7 @@ Enriched it with the weather data taken from openweathermap.org
 
 Plotted it on google maps as a heatmap, looks pretty - https://goo.gl/VXQYC6 but not very useful - color distribution is more affected by the dots closeness, not by their temperature.
 
-Tried to plot it as colored cirlces calculating color as a HSL gradient, looks fine too, but too laggy with 3K points.
+Tried to plot it as colored cirlces calculating color as a HSL gradient, looks fine too, https://goo.gl/XS9ZOY but too laggy with 3K points. 
 
 For such cases google maps have a cool feature currently is alpha-version - Fusion Tables. Uploaded my data to it, plotted - super, not lags. https://goo.gl/zQ1mft  Fusion Tables web-interface also allows to customize markers for data ranges. Not too flexible, may be that's because of alpha-state, there are hacky workarounds in JS but that's enough for me now. https://goo.gl/06Ixqw
 
