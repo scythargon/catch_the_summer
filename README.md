@@ -1,4 +1,4 @@
-I had some spare time the weekend and decided to make some pet-project or a micro-hackathon for myself. And there was no sunny weather in Moscow for a couple of months at the moment.
+Once upon a time I had some spare time in the weekend and decided to make some pet-project or a micro-hackathon for myself. And there was no sunny weather in Moscow for a couple of months at the moment.
 
 Parced city coordinates from map.aviasales.ru
 
